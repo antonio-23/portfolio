@@ -1,0 +1,35 @@
+---
+
+---
+
+<style>
+    nav {
+        background: rgba(255, 255, 255, 0.25);
+        padding: 15px 40px;
+        border-radius: 25px;
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        box-shadow: inset 5px 5px 10px rgba(174, 174, 192, 0.5),
+        5px 5px 10px rgba(174, 174, 192, 0.5);
+        cursor: pointer;
+    }
+
+    ul {
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    @media screen and (max-width: 640px) {
+        nav {
+            display: none;
+        }
+    }
+</style>
+
+<nav>
+    <ul>
+        <li>About me</li>
+        <li>Projects</li>
+        <li>Resume</li>
+    </ul>
+</nav>
