@@ -1,21 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 
 :root {
-    --gradient-1: #FDFBFB;
-    --gradient-2: #EBEDEE;
+  --gradient-1: #fdfbfb;
+  --gradient-2: #ebedee;
+
+  --color-brand-50: #f0f9ff;
+  --color-brand-100: #e0f2fe;
+  --color-brand-200: #bae6fd;
+  --color-brand-300: #7dd3fc;
+  --color-brand-400: #38bdf8;
+  --color-brand-500: #0ea5e9;
+  --color-brand-600: #0284c7;
+  --color-brand-700: #0369a1;
+  --color-brand-800: #075985;
+  --color-brand-900: #0c4a6e;
+  --color-brand-950: #082f49;
 }
 
-@font-face {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
-
 body {
-    font-family: 'Lato', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
-    height: 100vh;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+  height: 100vh;
 }
