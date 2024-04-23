@@ -1,7 +1,6 @@
-import React from "react";
 import { VisuallyHidden, useSwitch } from "@nextui-org/react";
-import { MoonIcon } from "../styles/MoonIcon.tsx";
-import { SunIcon } from "../styles/SunIcon.tsx";
+import { MoonIcon } from "../../public/styles/MoonIcon.tsx";
+import { SunIcon } from "../../public/styles/SunIcon.tsx";
 
 const ThemeSwitch = () => {
   const {
@@ -14,7 +13,7 @@ const ThemeSwitch = () => {
   } = useSwitch();
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className='flex flex-col gap-2'>
       <Component {...getBaseProps()}>
         <VisuallyHidden>
           <input {...getInputProps()} />
