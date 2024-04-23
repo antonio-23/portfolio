@@ -2,34 +2,56 @@
 
 ---
 
-<style>
-    nav {
-        background: rgba(255, 255, 255, 0.25);
-        padding: 15px 40px;
-        border-radius: 25px;
-        backdrop-filter: blur(25px);
-        -webkit-backdrop-filter: blur(25px);
-        box-shadow: inset 5px 5px 10px rgba(174, 174, 192, 0.5),
-        5px 5px 10px rgba(174, 174, 192, 0.5);
-        cursor: pointer;
-    }
-
-    ul {
-        display: flex;
-        gap: 2.5rem;
-    }
-
-    @media screen and (max-width: 640px) {
-        nav {
-            display: none;
-        }
-    }
-</style>
-
 <nav>
-    <ul>
-        <li>About me</li>
-        <li>Projects</li>
-        <li>Resume</li>
-    </ul>
+  <ul>
+    <li>About me</li>
+    <li>Projects</li>
+    <li>Resume</li>
+  </ul>
 </nav>
+
+<style>
+  nav {
+    background: var(--element-bg);
+    padding: 15px 40px;
+    border-radius: 25px;
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+  }
+
+  ul {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  li {
+    list-style: none;
+    position: relative;
+  }
+
+  li::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-brand-500);
+    visibility: hidden;
+    -webkit-transition: 0.25s 0s ease-in-out;
+    transition: 0.25s 0s ease-in-out;
+  }
+
+  li:hover::after {
+    visibility: visible;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 640px) {
+    nav {
+      display: none;
+    }
+  }
+</style>

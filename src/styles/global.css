@@ -4,7 +4,13 @@
   --gradient-1: #fdfbfb;
   --gradient-2: #ebedee;
 
-  --color-brand-50: #f0f9ff;
+  --color-gray-400: #9ca3af;
+
+  --element-bg: rgba(255, 255, 255, 0.25);
+  --shadow: inset 5px 5px 10px rgba(174, 174, 192, 0.5),
+    5px 5px 10px rgba(174, 174, 192, 0.5);
+  --blur: var(25px);
+
   --color-brand-100: #e0f2fe;
   --color-brand-200: #bae6fd;
   --color-brand-300: #7dd3fc;
