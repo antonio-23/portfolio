@@ -1,56 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import HeroLeft from "../components/HeroLeft.astro";
-import HeroRight from "../components/HeroRight.astro";
+import Main from "../components/Main.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <Layout title='AntDev'>
-  <main>
-    <HeroLeft />
-    <HeroRight />
-  </main>
+  <Main>
+    <Hero />
+  </Main>
 </Layout>
-
-<style>
-  main {
-    max-width: 90rem;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    align-items: start;
-    height: calc(100vh - 6.4rem);
-    padding-top: 20rem;
-    overflow: hidden;
-
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInMoveDown 1s ease-out forwards;
-  }
-
-  body::-webkit-scrollbar {
-    display: none;
-  }
-
-  @keyframes fadeInMoveDown {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @media screen and (max-width: 1440px) {
-    main {
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-  }
-
-  @media screen and (max-width: 870px) {
-    main {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
-      padding-top: 2rem;
-    }
-  }
-</style>

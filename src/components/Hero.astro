@@ -1,0 +1,159 @@
+---
+import Image from "astro/components/Image.astro";
+import avatar from "../images/memoji.jpg";
+---
+
+<div class='container'>
+  <div class='hero-left'>
+    <p>Hi, I'm Antoni 👋🏻</p>
+    <h1><span>Front</span>end<br /> developer</h1>
+    <p>I'm a junior frontend developer based in Poland</p>
+  </div>
+  <div class='hero-right'>
+    <Image class='image' src={avatar} alt='Avatar' />
+    <span class='ring'></span>
+  </div>
+</div>
+
+<style>
+  .container {
+    max-width: 85rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    height: calc(100vh - 6.4rem);
+    padding-bottom: 8rem;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInMoveDown 1s ease-out forwards;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  @keyframes fadeInMoveDown {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+  }
+
+  p:first-child {
+    font-size: 1.3rem;
+    color: #000;
+  }
+
+  h1 {
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+
+  h1 span:first-child {
+    color: var(--color-brand-500);
+  }
+
+  p:last-child {
+    font-size: 1.3rem;
+    color: var(--color-gray-400);
+  }
+
+  .hero-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .image {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .ring {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border: 15px solid var(--element-bg);
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+    box-shadow: var(--shadow);
+    border-radius: 50%;
+    z-index: 10;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .image {
+      width: 200px;
+      height: 200px;
+    }
+
+    .ring {
+      width: 300px;
+      height: 300px;
+    }
+
+    p:first-child {
+      font-size: 1.1rem;
+    }
+
+    h1 {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+
+    p:last-child {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media screen and (max-width: 870px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      padding-top: 1.3rem;
+    }
+    .image {
+      width: 180px;
+      height: 180px;
+    }
+
+    .ring {
+      width: 260px;
+      height: 260px;
+    }
+
+    p:first-child {
+      font-size: 1.1rem;
+    }
+
+    h1 {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+
+    p:last-child {
+      font-size: 1.1rem;
+    }
+  }
+</style>
