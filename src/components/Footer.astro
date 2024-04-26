@@ -1,0 +1,82 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer>
+  <div class='group'>
+    <p>
+      Built with <a class='link' href='https://astro.build/'> Astro</a>
+    </p>
+    <p>&copy; {currentYear} Antoni Garczyński</p>
+  </div>
+  <p class='socials'>
+    <a class='link' href='https://github.com/antonio-23'>Github</a>
+    <a class='link' href='https://www.linkedin.com/in/antoni-garczynski/'
+      >LinkedIn</a
+    >
+  </p>
+</footer>
+
+<span></span>
+
+<style>
+  footer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 1.5rem 3rem;
+    text-align: center;
+    color: var(--color-gray-400);
+    font-size: 0.875rem;
+    background-color: var(--element-bg);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 10;
+  }
+
+  span {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    width: 35rem;
+    height: 35rem;
+    background-color: var(--color-brand-200);
+    border-top-left-radius: 100%;
+    z-index: 1;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    color: var(--color-gray-400);
+  }
+
+  @media screen and (max-width: 640px) {
+    .group {
+      display: flex;
+      justify-content: space-between;
+    }
+    footer {
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: 870px) {
+    span {
+      bottom: -5rem;
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+</style>
