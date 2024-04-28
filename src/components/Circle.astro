@@ -1,0 +1,41 @@
+<span></span>
+
+<style>
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  span {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    width: 35rem;
+    height: 35rem;
+    background-color: var(--color-brand-200);
+    border-top-left-radius: 100%;
+    z-index: 1;
+    animation: scale 2s ease-in-out;
+  }
+
+  @media screen and (max-width: 870px) {
+    span {
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    span {
+      display: none;
+    }
+  }
+</style>
